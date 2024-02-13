@@ -1,0 +1,34 @@
+.slider{
+    position: relative;
+    height: calc(100vh - 80px);
+    width: 100ww;
+    
+.slider-images{
+ transition: all 1s ease-in;
+}
+.slider-buttons-container{
+    position:absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: fit-content;
+    bottom: 100px;
+    display: flex;
+    gap: 20px;
+    
+    .icon{
+        width: 50px;
+        height: 50px;
+        border: 1px solid #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+            opacity: 60%;
+        }
+        }
+
+}
+}
