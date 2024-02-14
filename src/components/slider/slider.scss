@@ -1,10 +1,11 @@
 .slider{
     position: relative;
-    height: calc(100vh - 80px);
+  
     width: 100ww;
+    overflow-x: hidden;
     
 .slider-images{
- transition: all 1s ease-in;
+ transition: all 0.5s ease-in;
 }
 .slider-buttons-container{
     position:absolute;

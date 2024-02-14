@@ -18,28 +18,28 @@ const Circle=()=>{
 }
 const Navbar = () => {
   return (
-    <div className="navbar p-6 px-8 shadow-lg">
+    <div className="navbar p-6  shadow-lg">
       <div className="wrapper flex justify-between items-center">
         <div className="left ">
           <div className="left-items flex gap-4 align-middle">
             <img src="img/flag.webp" style={{ height: 20 }} alt="" />
             <KeyboardArrowDownIcon />
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/product/1">
                 <span>Men</span>
               </Link>
             </div>
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/product/2">
                 <span>Women</span>
               </Link>
             </div>
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/product/3">
                 <span>Children</span>
               </Link>
             </div>
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/product/4">
                 {" "}
                 <span>Accessories</span>
@@ -49,36 +49,38 @@ const Navbar = () => {
         </div>
         <div className="center">
           <Link to="/">
-            <h1 className="text-2xl ">Meveea Store</h1>
+            <h1 className="text-xl sm:text-2xl  ">Meveea Store</h1>
           </Link>{" "}
         </div>
         <div className="right">
           <div className="right-items flex gap-4 align-top">
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/">
                 <span>Homepage</span>
               </Link>
             </div>{" "}
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/about">
                 <span>About</span>
               </Link>
             </div>{" "}
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/contact">
                 <span>Contact</span>
               </Link>
             </div>{" "}
-            <div className="item hidden md:block">
+            <div className="item hidden lg:block">
               <Link to="/store">
                 <span>Store</span>
               </Link>
             </div>
-            <SearchIcon className="text-slate-500 hidden md:block"></SearchIcon>
-            <PersonOutlineOutlinedIcon className="text-slate-500 hidden md:block"></PersonOutlineOutlinedIcon>
-            <FavoriteBorderIcon className="text-slate-500 hidden md:block"></FavoriteBorderIcon>
-            <div className="cartIcon relative">
-              <ShoppingCartOutlinedIcon className="text-slate-500"></ShoppingCartOutlinedIcon>
+            <div className="icons sm:flex gap-4 hidden">
+              <SearchIcon className="hidden text-slate-500"></SearchIcon>
+              <PersonOutlineOutlinedIcon className="text-slate-500 hidden md:block"></PersonOutlineOutlinedIcon>
+              <FavoriteBorderIcon className=" text-slate-500 hidden md:block"></FavoriteBorderIcon>
+            </div>
+            <div className="cartIcon  relative">
+              <ShoppingCartOutlinedIcon className="text-slate-500 "></ShoppingCartOutlinedIcon>
               <Circle></Circle>
             </div>
           </div>
