@@ -5,6 +5,7 @@ import Product from './pages/Product/Product';
 import Products from './pages/Products/Products';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import ArtistProducts from './components/artists/ArtistProducts';
 
 const Layout=()=>{
   return<>
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <Products></Products>,
+      },
+      {
+        path: "/artists/:name",
+        element: <ArtistProducts></ArtistProducts>,
       },
       {
         path: "/product/:id",

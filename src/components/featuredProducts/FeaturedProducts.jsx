@@ -77,9 +77,8 @@ const FeaturedProducts = (props) => {
       // },
     ];
 
-    const [img,setImg]=useState("img1")
   return (
-    <div className="fetured-trending-products mx-28 flex-col gap-8 justify-center items-center my-12">
+    <div className="fetured-trending-products mx-28 flex-col gap-8 justify-center items-center my-12 ">
       <div className="text-part flex gap-24 justify-between items-center mb-6">
         <h1 className="text-3xl ">{props.title}</h1>
         <p className="description text-gray-500 w-[700px]">
