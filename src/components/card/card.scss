@@ -1,0 +1,11 @@
+.images-container{
+
+    &:hover{
+        .mainImg{
+            z-index: 2;
+        }
+    }
+    .secondImg{
+        z-index: 1;
+    }
+}
