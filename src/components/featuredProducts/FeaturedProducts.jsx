@@ -87,9 +87,10 @@ const FeaturedProducts = (props) => {
           consectetur, adipisicing elit. Voluptate adipisci aspernatur et, porro
         </p>
       </div>
-      <div className="bottom flex gap-8">
+      <div className="bottom flex gap-8 ml-8">
         {data.map((ele) => (
-          <Card  data={ele}></Card>
+            <Card data={ele}></Card>
+          
         ))}
       </div>
     </div>

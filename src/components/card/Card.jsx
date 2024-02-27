@@ -7,8 +7,8 @@ const Card = ({data}) => {
   console.log(isNew)
   return (
     <Link to={`/product/${id}`}>
-      <div className="images-container flex flex-col w-[240px] rounded-md">
-        <div className="images overflow-hidden w-[100%] h-[340px] relative ">
+      <div className="images-container flex flex-col w-[220px] rounded-md mb-8">
+        <div className="images overflow-hidden w-[100%] h-[300px] relative ">
           {isNew && (
             <span className="text-teal-300 absolute z-20 bg-white px-2 m-1 rounded-sm bg-opacity-75">
               New Season

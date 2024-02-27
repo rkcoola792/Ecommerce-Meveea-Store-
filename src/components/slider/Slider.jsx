@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./slider.scss"
 const Slider = () => {
   const [currentSlide,setCurrentSlide]=useState(0)
-  const data=["public/img/pexels-royal-anwar-983497 (1).jpg","public/img/pexels-spencer-selover-428338.jpg","public/img/pexels-spencer-selover-428340.jpg"]
+  const data=["/img/pexels-royal-anwar-983497 (1).jpg","/img/pexels-spencer-selover-428338.jpg","/img/pexels-spencer-selover-428340.jpg"]
 
   function prevSlide(){
     setCurrentSlide(currentSlide===0?2:(prev)=>prev-1)
