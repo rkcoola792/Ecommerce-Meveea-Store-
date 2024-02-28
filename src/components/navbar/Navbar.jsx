@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -6,8 +6,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from 'react-router-dom';
 import "./navbar.scss"
+import Cart from '../cart/Cart';
 
 const Circle=()=>{
+  
   return (
     <>
       <div className="h-6 rounded-full absolute bg-blue-500 w-6 -top-3 -right-3">
@@ -17,6 +19,7 @@ const Circle=()=>{
   );
 }
 const Navbar = () => {
+  const [cartOpen, setCartOpen] = useState(false);
   return (
     <div className="navbar p-6  shadow-lg">
       <div className="wrapper flex justify-between items-center">
@@ -79,13 +82,14 @@ const Navbar = () => {
               <PersonOutlineOutlinedIcon className="text-slate-500 hidden md:block"></PersonOutlineOutlinedIcon>
               <FavoriteBorderIcon className=" text-slate-500 hidden md:block"></FavoriteBorderIcon>
             </div>
-            <div className="cartIcon  relative">
+            <div className="cartIcon relative" onClick={()=>setCartOpen(!cartOpen)}>
               <ShoppingCartOutlinedIcon className="text-slate-500 "></ShoppingCartOutlinedIcon>
               <Circle></Circle>
             </div>
           </div>
         </div>
       </div>
+      {cartOpen&& <Cart></Cart>}
     </div>
   );
 }

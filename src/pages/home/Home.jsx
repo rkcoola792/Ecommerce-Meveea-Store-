@@ -3,6 +3,7 @@ import Slider from '../../components/slider/Slider'
 import FeaturedProducts from '../../components/featuredProducts/FeaturedProducts'
 import FeaturedCelebs from '../../components/Categories/FeaturedCelebs'
 import { Link } from 'react-router-dom'
+import Social from '../../components/social/Social'
 const Home = () => {
   let celeb = [
     {
@@ -54,6 +55,7 @@ const Home = () => {
       </div>
 
       <FeaturedProducts title="Trending" />
+      
     </div>
   );
 }

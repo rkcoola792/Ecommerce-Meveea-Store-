@@ -76,7 +76,6 @@ const List = ({maxPrice,categoryId,sort}) => {
         newPrice: "$12",
       },
     ];
-    console.log("asda")
   return (
     <div className='list flex flex-wrap gap-8 mt-8 '>
       {data.map(ele=><Card data={ele} key={data.id}></Card>)}
