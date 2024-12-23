@@ -1,9 +1,9 @@
-import React from 'react'
-import Slider from '../../components/slider/Slider'
-import FeaturedProducts from '../../components/featuredProducts/FeaturedProducts'
-import FeaturedCelebs from '../../components/Categories/FeaturedCelebs'
-import { Link } from 'react-router-dom'
-import Social from '../../components/social/Social'
+import React from "react";
+import Slider from "../../components/slider/Slider";
+import FeaturedProducts from "../../components/featuredProducts/FeaturedProducts";
+import FeaturedCelebs from "../../components/Categories/FeaturedCelebs";
+import { Link } from "react-router-dom";
+import Social from "../../components/social/Social";
 const Home = () => {
   let celeb = [
     {
@@ -36,28 +36,26 @@ const Home = () => {
       name: "Naruto",
       img: "/Horizontal/10.jpg",
     },
- 
   ];
   return (
     <div>
       <Slider />
-      
+
       <FeaturedProducts title="Featured" />
-      <div className='artists flex flex-col gap-12 justify-center items-center mx-auto mb-20' > 
+      <div className="artists flex flex-col gap-12 justify-center items-center mx-auto mb-20">
         <h1 className="text-3xl">Featured Artists</h1>
         <div className="celebs flex gap-8 flex-wrap w-[60%] px-8">
           {celeb.map((ele) => (
-      <Link to={`artists/${ele?.name}`}>
-            <FeaturedCelebs celebs={ele}></FeaturedCelebs>
-      </Link>
+            <Link to={`artists/${ele?.name}`}>
+              <FeaturedCelebs celebs={ele}></FeaturedCelebs>
+            </Link>
           ))}
         </div>
       </div>
 
       <FeaturedProducts title="Trending" />
-      
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

@@ -1,15 +1,18 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
-import Home from './pages/Home/Home';
+
 import Product from './pages/Product/Product';
 import Products from './pages/Products/Products';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import ArtistProducts from './components/artists/ArtistProducts';
+import TopHeader from './components/topHeader/topHeader';
+import Home from './pages/home/Home';
 
 const Layout=()=>{
   return<>
-  <Navbar></Navbar>
+  <TopHeader/>
+  <Navbar/>
   <Outlet></Outlet>
     <Footer></Footer>
   </>
@@ -34,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home/>,
       },
     ],
   },
