@@ -16,7 +16,7 @@ const Slider = () => {
     "/Horizontal/10.jpg",
   ];
   return (
-    <div className="automaticSlider h-svh w-[75%] mx-auto object-cover rounded-md mt-8 overflow-hidden">
+    <div className="automaticSlider h-[80%] md:w-[75%] mx-auto object-cover rounded-md mt-8 overflow-hidden">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

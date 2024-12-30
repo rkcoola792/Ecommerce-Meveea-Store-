@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CenterNav from "./centerNav";
 import RightNav from "./rightNav";
-
+import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,13 +23,13 @@ const Navbar = () => {
               className="md:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <span className="material-icons">menu</span>
+              <span className="material-icons"><RxHamburgerMenu /></span>
             </button>
           </div>
         </div>
         {menuOpen && (
           <div className="md:hidden">
-            <CenterNav />
+            <CenterNav menuOpen={menuOpen}/>
           </div>
         )}
       </div>
