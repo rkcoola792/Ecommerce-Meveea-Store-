@@ -34,7 +34,11 @@ const router = createBrowserRouter([
   // Add more routes here
   {
     path: "/cart",
-    element: <Layout Component={CartNew} />,
+    element: <Layout Component={()=><CartNew name="cart" />} />,
+  },
+  {
+    path: "/wishlist",
+    element: <Layout Component={() => <CartNew name="wishlist" />} />,
   },
 ]);
 

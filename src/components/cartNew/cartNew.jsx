@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 
-const CartNew = () => {
+const CartNew = ({name}) => {
   // Assuming the Redux state structure, replace this with your actual state
   // const { cartItems } = useSelector((state) => state.cart);
 
@@ -16,7 +16,7 @@ const CartNew = () => {
         <div className="cart-items">
           <div className="text-center max-w-[800px] mx-auto mt-8 md:mt-0">
             <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight">
-              Cart
+              {name}
             </div>
           </div>
           {/* Cart content starts here */}
@@ -67,9 +67,9 @@ const CartNew = () => {
             width={300}
             className="w-[250px] md:w-[350px]"
           />
-          <span className="text-xl font-bold mt-4">Your cart is empty</span>
+          <span className="text-xl font-bold mt-4">Your {name} is empty</span>
           <span className="text-center mt-2 text-sm md:text-base font-oswald">
-            <p>Looks like you have not added anything to your cart.</p>
+            <p>Looks like you have not added anything to your {name}.</p>
             <p>Go ahead and explore the categories.</p>
           </span>
           <Link

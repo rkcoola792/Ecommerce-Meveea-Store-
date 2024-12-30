@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 const RightNav = () => {
   return (
     <div className="flex gap-4 items-center">
-      <FiHeart className="cursor-pointer" />
+      <Link to="/wishlist">
+        <FiHeart className="cursor-pointer" />
+      </Link>
       <IoPersonOutline className="cursor-pointer" />
       <Link to="/cart">
         <IoCartOutline className="cursor-pointer" />
