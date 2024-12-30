@@ -4,6 +4,10 @@ import FeaturedProducts from "../../components/featuredProducts/FeaturedProducts
 import FeaturedCelebs from "../../components/Categories/FeaturedCelebs";
 import { Link } from "react-router-dom";
 import Social from "../../components/social/Social";
+import DropWeek from "../../components/dropWeek/dropWeek";
+import Hotseller from "../../components/hotseller/hotseller";
+import NewArrival from "../../components/newArrival/newArrival";
+import CustomOrder from "../../components/customOrder/customOrder";
 const Home = () => {
   let celeb = [
     {
@@ -40,20 +44,11 @@ const Home = () => {
   return (
     <div>
       <Slider />
-
-      <FeaturedProducts title="Featured" />
-      <div className="artists flex flex-col gap-12 justify-center items-center mx-auto mb-20">
-        <h1 className="text-3xl">Featured Artists</h1>
-        <div className="celebs flex gap-8 flex-wrap w-[60%] px-8">
-          {celeb.map((ele) => (
-            <Link to={`artists/${ele?.name}`}>
-              <FeaturedCelebs celebs={ele}></FeaturedCelebs>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <FeaturedProducts title="Trending" />
+      <DropWeek />
+      <NewArrival />
+      <CustomOrder/>
+      <Hotseller />
+    
     </div>
   );
 };

@@ -5,9 +5,9 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 const RightNav = () => {
   return (
     <div className="flex gap-4 items-center">
-      <FavoriteBorderIcon  className="text-sm"/>
-      <PersonOutlineOutlinedIcon />
-      <ShoppingCartOutlinedIcon />
+      <FavoriteBorderIcon className="text-sm cursor-pointer" />
+      <PersonOutlineOutlinedIcon className="cursor-pointer" />
+      <ShoppingCartOutlinedIcon className="cursor-pointer" />
     </div>
   );
 };

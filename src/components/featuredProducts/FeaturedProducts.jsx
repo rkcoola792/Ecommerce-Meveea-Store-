@@ -78,21 +78,8 @@ const FeaturedProducts = (props) => {
     ];
 
   return (
-    <div className="fetured-trending-products mx-28 flex-col gap-8 justify-center items-center my-12 ">
-      <div className="text-part flex gap-24 justify-between items-center mb-6">
-        <h1 className="text-3xl ">{props.title}</h1>
-        <p className="description text-gray-500 w-[700px]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-          adipisci aspernatur et, porro ipsam.Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Voluptate adipisci aspernatur et, porro
-        </p>
-      </div>
-      <div className="bottom flex gap-8 ml-8">
-        {data.map((ele) => (
-            <Card data={ele}></Card>
-          
-        ))}
-      </div>
+    <div className="featuredProducts">
+     
     </div>
   );
 }
