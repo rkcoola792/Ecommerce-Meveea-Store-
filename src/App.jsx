@@ -7,14 +7,14 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 // import ArtistProducts from "./components/artists/ArtistProducts";
 import TopHeader from "./components/topHeader/topHeader";
-// import Home from "./pages/home/Home";
+import Home from "./pages/home/Home";
 
 const Layout = () => {
   return (
     <>
       <TopHeader />
       <Navbar />
-      <Outlet></Outlet>
+      <Home></Home>
       <Footer></Footer>
     </>
   );
