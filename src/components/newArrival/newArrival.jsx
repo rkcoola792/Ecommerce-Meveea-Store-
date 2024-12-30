@@ -7,7 +7,7 @@ const NewArrival = () => {
       <div>
         <img src="/Horizontal/new-arrival.png" className="w-full"></img>
       </div>
-      <div className="grid md:grid-cols-4 grid-cols-2 gap-8 sm:mt-8 mt-2">
+      <div className="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-2 sm:mt-8 mt-2">
         <div>
           <img src="/vertical/7.jpg"></img>
         </div>

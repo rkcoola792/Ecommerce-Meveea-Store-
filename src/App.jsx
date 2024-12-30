@@ -1,21 +1,23 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-// import Product from "./pages/Product/Product";
-// import Products from "./pages/Products/Products";
+import Products from "./pages/Products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-// import ArtistProducts from "./components/artists/ArtistProducts";
 import TopHeader from "./components/topHeader/topHeader";
 import Home from "./pages/home/Home";
+import Cart from "./components/cart/Cart";
+import CartNew from "./components/cartNew/cartNew";
 
-const Layout = () => {
+const Layout = ({ Component }) => {
   return (
     <>
       <TopHeader />
       <Navbar />
-      <Home></Home>
-      <Footer></Footer>
+      <div className="content">
+        <Component />
+      </div>
+      <Footer />
     </>
   );
 };
@@ -23,31 +25,23 @@ const Layout = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout></Layout>,
-    children: [
-      // {
-      //   path: "/products/:id",
-      //   // element: <Products></Products>,
-      // },
-      // {
-      //   path: "/artists/:name",
-      //   element: <ArtistProducts></ArtistProducts>,
-      // },
-      // {
-      //   path: "/product/:id",
-      //   element: <Product></Product>,
-      // },
-      // {
-      //   path: "/",
-      //   element: <Home />,
-      // },
-    ],
+    element: <Layout Component={Home} />, // Home page with Layout
+  },
+  {
+    path: "/products/:id",
+    element: <Layout Component={Products} />, // Product page with Layout
+  },
+  // Add more routes here
+  {
+    path: "/cart",
+    element: <Layout Component={CartNew} />,
   },
 ]);
+
 function App() {
   return (
     <div>
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router} />
     </div>
   );
 }

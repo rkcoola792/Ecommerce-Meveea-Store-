@@ -2,9 +2,11 @@ import React from "react";
 
 const TopHeader = () => {
   return (
-    <div className="bg-black text-white  px-4 ">
-      <div className="max-w-screen-lg flex items-center justify-between mx-auto h-10 text-sm 
-      ">
+    <div className="bg-black text-white  px-4 font-oswald font-medium uppercase text-sm">
+      <div
+        className="max-w-screen-lg flex items-center justify-between mx-auto h-10 text-sm 
+      "
+      >
         <div className="flex items-center gap-8 ">
           <p>WOMEN</p>
           <p>MEN</p>

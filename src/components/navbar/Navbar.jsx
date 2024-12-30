@@ -8,7 +8,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="mx-auto shadow-md sticky top-0 z-50 bg-white">
+    <div className="mx-auto shadow-md sticky top-0 z-50 bg-white font-oswald">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-12">
           <Link to="/">
